@@ -1,28 +1,23 @@
 puts "So, you've decided to leave the house for some fresh air?"
 puts "Are you walking or running?"
-mode = gets.chomp!
 
 x = 0
 
-while x < 30
-
+while x < 29
+  mode = gets.chomp!
     if mode == "walking"
       x += 1
      puts "Distance is #{x} km."
-     mode = gets.chomp!
   elsif mode == "running"
      x += 5
      puts "Distance is #{x} km."
-     mode = gets.chomp!
-   else
-     puts "So, you've decided to leave the house for some fresh air?"
-     puts "Are you walking or running?"
-     mode = gets.chomp!
+   elsif
+     puts "Not valid response -- are you walking or running?"
+    break if x > 29
   end
 end
 
 puts "You've finally made it home!! :)"
-
 # mode = gets.chomp!
 #
 #   if mode == "walking"
