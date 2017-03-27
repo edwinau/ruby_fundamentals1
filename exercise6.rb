@@ -2,14 +2,21 @@ puts "So, you've decided to leave the house for some fresh air?"
 puts "Are you walking or running?"
 
 x = 0
+y = 10
 
-while x < 29
+while x < 50
   mode = gets.chomp!
-  if mode == "walking"
+  if y < 4
+    x += 0
+    y += 1
+    puts "you have absolutely no energy to run, keep walking until you build up energy!"
+  elsif mode == "walking"
       x += 1
+      y += 2
      puts "Distance is #{x} km."
   elsif mode == "running"
      x += 5
+     y -= 5
      puts "Distance is #{x} km."
   elsif mode == "GO HOME"
      x = 30
