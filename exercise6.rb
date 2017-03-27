@@ -5,15 +5,18 @@ x = 0
 
 while x < 29
   mode = gets.chomp!
-    if mode == "walking"
+  if mode == "walking"
       x += 1
      puts "Distance is #{x} km."
   elsif mode == "running"
      x += 5
      puts "Distance is #{x} km."
-   elsif
+  elsif mode == "GO HOME"
+     x = 30
+     puts "you suck"
+     break
+  else
      puts "Not valid response -- are you walking or running?"
-    break if x > 29
   end
 end
 
