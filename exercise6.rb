@@ -1,33 +1,39 @@
-puts "So, you've decided to leave the house for some fresh air?"
-puts "Are you walking or running?"
+x = 0 #distance
+y = 10 #energy
 
-x = 0
-y = 10
+puts "So, heading home?"
+puts "will you walk or run?"
 
 while x < 50
   mode = gets.chomp!
-  if y < 4
-    x += 0
-    y += 1
-    puts "you have absolutely no energy to run, keep walking until you build up energy!"
-  elsif mode == "walking"
+    if y < 5 && mode == "walk"
       x += 1
-      y += 2
-     puts "Distance is #{x} km."
-  elsif mode == "running"
-     x += 5
-     y -= 5
-     puts "Distance is #{x} km."
-  elsif mode == "GO HOME"
-     x = 30
-     puts "you suck"
-     break
+      y += 1
+      puts "Distance is #{x} km."
+    elsif
+      y < 5
+      x += 0
+      y += 1
+      puts "you have absolutely no energy to run, keep walking until you build up energy!"
+      puts "if you want to give up, type 'GO HOME'...!"
+    elsif mode == "walk"
+        x += 1
+        y += 1
+       puts "Distance is #{x} km."
+    elsif mode == "run"
+       x += 5
+       y -= 5
+       puts "Distance is #{x} km."
+    elsif mode == "GO HOME"
+       x = 50
+       puts "you suck"
+       break
   else
      puts "Not valid response -- are you walking or running?"
   end
 end
 
-puts "You've finally made it home!! :)"
+puts "You've finally made it home!!"
 # mode = gets.chomp!
 #
 #   if mode == "walking"
